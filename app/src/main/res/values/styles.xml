@@ -1,0 +1,17 @@
+<resources>
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="colorPrimary">@color/colorIndigo500</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <style name="DistributionTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <item name="colorPrimary">@color/colorIndigo500</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent
+        </item><item name="android:icon">@drawable/ic_baseline_equalizer_24_white</item>
+        <item name="logo">@drawable/ic_baseline_equalizer_24_white</item>
+        <item name="displayOptions">useLogo|showHome|showTitle</item>
+    </style>
+</resources>

@@ -1,0 +1,300 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!--manual_book-->
+    <androidx.cardview.widget.CardView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginHorizontal="15dp"
+        android:layout_marginTop="20dp"
+        android:backgroundTint="@color/colorPink100"
+        android:elevation="8dp"
+        app:cardCornerRadius="20dp">
+
+        <ImageView
+            android:id="@+id/uniform_distribution_manual_book"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_margin="10dp"
+            android:background="@color/colorPink100"
+            android:contentDescription="@string/todo"
+            android:src="@drawable/ic_baseline_menu_book_24" />
+
+    </androidx.cardview.widget.CardView>
+
+    <!--scrollable_content-->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/colorIndigo50">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!--graph_view-->
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="400dp"
+                android:layout_marginHorizontal="15dp"
+                android:layout_marginVertical="30dp"
+                app:cardCornerRadius="10dp"
+                app:cardElevation="7dp">
+
+                <com.github.mikephil.charting.charts.BarChart
+                    android:id="@+id/uniform_distribution_graph_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="10dp" />
+
+            </androidx.cardview.widget.CardView>
+
+            <!--simulator_view-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <!--parameters_of_uniform_random_variable-->
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center">
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="20dp"
+                        android:layout_marginVertical="10dp"
+                        android:background="@color/colorWhite"
+                        app:cardCornerRadius="5dp"
+                        app:cardElevation="3dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="5dp"
+                            android:background="@color/colorWhite"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:layout_gravity="center"
+                                android:layout_weight="1"
+                                android:fontFamily="@font/alegreya_sans_sc"
+                                android:gravity="center"
+                                android:text="Range of  X "
+                                android:textColor="@color/colorIndigo400"
+                                android:textSize="18sp"
+                                android:textStyle="bold" />
+
+                            <com.google.android.material.textfield.TextInputLayout
+                                android:layout_width="10dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="4">
+
+                                <com.google.android.material.textfield.TextInputEditText
+                                    android:id="@+id/uniform_random_variable_minimum"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:autofillHints=""
+                                    android:gravity="center"
+                                    android:hint="Minimum ( a )"
+                                    android:inputType="numberDecimal"
+                                    android:text="10"
+                                    android:textColor="@color/colorGray" />
+                            </com.google.android.material.textfield.TextInputLayout>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:text="to"
+                                android:textColor="@color/colorGray"
+                                android:textSize="16sp" />
+
+                            <com.google.android.material.textfield.TextInputLayout
+                                android:layout_width="10dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="4">
+
+                                <com.google.android.material.textfield.TextInputEditText
+                                    android:id="@+id/uniform_random_variable_maximum"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="3"
+                                    android:autofillHints=""
+                                    android:gravity="center"
+                                    android:hint="Maximum ( b )"
+                                    android:inputType="numberDecimal"
+                                    android:text="20"
+                                    android:textColor="@color/colorGray" />
+                            </com.google.android.material.textfield.TextInputLayout>
+
+                        </LinearLayout>
+
+                    </androidx.cardview.widget.CardView>
+
+                </RelativeLayout>
+
+                <!--derived_variables_view-->
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center">
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="20dp"
+                        android:layout_marginVertical="10dp"
+                        android:background="@color/colorWhite"
+                        app:cardCornerRadius="5dp"
+                        app:cardElevation="3dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginHorizontal="5dp"
+                            android:layout_marginVertical="10dp"
+                            android:background="@color/colorWhite"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:layout_gravity="center"
+                                android:layout_weight="1"
+                                android:fontFamily="@font/alegreya_sans_sc"
+                                android:gravity="center"
+                                android:text="Mean "
+                                android:textColor="@color/colorIndigo400"
+                                android:textSize="18sp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/uniform_distribution_mean"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:layout_gravity="center"
+                                android:layout_weight="3"
+                                android:ellipsize="end"
+                                android:gravity="center"
+                                android:text="0.0"
+                                android:textColor="@color/colorGray" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:layout_gravity="center"
+                                android:layout_weight="1"
+                                android:fontFamily="@font/alegreya_sans_sc"
+                                android:gravity="center"
+                                android:text="Standard Deviation"
+                                android:textColor="@color/colorIndigo400"
+                                android:textSize="18sp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/uniform_distribution_standard_deviation"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:layout_gravity="center"
+                                android:layout_weight="3"
+                                android:ellipsize="end"
+                                android:gravity="center"
+                                android:text="0.0"
+                                android:textColor="@color/colorGray" />
+                        </LinearLayout>
+                    </androidx.cardview.widget.CardView>
+
+                </RelativeLayout>
+
+                <!--probability_function_view-->
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center">
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="20dp"
+                        android:layout_marginVertical="10dp"
+                        android:background="@color/colorWhite"
+                        app:cardCornerRadius="5dp"
+                        app:cardElevation="3dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@color/colorWhite"
+                            android:orientation="vertical">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginHorizontal="10dp"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="match_parent"
+                                    android:layout_gravity="center"
+                                    android:layout_marginVertical="5dp"
+                                    android:layout_weight="1"
+                                    android:fontFamily="@font/alegreya_sans_sc"
+                                    android:gravity="center_vertical"
+                                    android:text="Probability Function"
+                                    android:textColor="@color/colorIndigo400"
+                                    android:textSize="18sp"
+                                    android:textStyle="bold" />
+
+                                <TextView
+                                    android:id="@+id/uniform_random_variable_probability"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="match_parent"
+                                    android:layout_marginVertical="5dp"
+                                    android:layout_weight="4"
+                                    android:gravity="center_vertical"
+                                    android:text="P(X = x) : "
+                                    android:textSize="16sp" />
+                            </LinearLayout>
+
+                            <SeekBar
+                                android:id="@+id/uniform_random_variable_seek_bar"
+                                style="@style/Widget.AppCompat.SeekBar.Discrete"
+                                android:layout_width="match_parent"
+                                android:layout_height="30dp"
+                                android:layout_marginHorizontal="10dp"
+                                android:layout_marginVertical="10dp"
+                                android:progress="0" />
+
+                        </LinearLayout>
+
+                    </androidx.cardview.widget.CardView>
+
+                </RelativeLayout>
+
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+    </ScrollView>
+
+
+</RelativeLayout>
